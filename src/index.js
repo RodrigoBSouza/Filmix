@@ -9,7 +9,7 @@ import SeasonsDetails from './components/SeasonsDetails';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
+  <BrowserRouter basename='/filmix'>
     <Routes>
       <Route path="/" element={<App/>}/>
       <Route path="/details/:id" element={<FilmsDetails/>}/>
