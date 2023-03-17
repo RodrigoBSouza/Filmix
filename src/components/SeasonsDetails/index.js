@@ -1,4 +1,4 @@
-import { Container, ContainerDetails, ContainerTitle, ContainerOverview, ContainerReleaseTime } from "./styles.SeasonsDetails";
+import { Container, ContainerDetails, ContainerTitle, ContainerOverview } from "./styles.SeasonsDetails";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
@@ -23,7 +23,7 @@ function SeasonsDetails() {
         fetch(`https://api.themoviedb.org/3/tv/${idSeasons}?api_key=${API_KEY}&language=pt-BR`)
             .then(response => response.json())
             .then(data => {
-                const {name, vote_average, overview, poster_path, release_date, runtime} = data;
+                const {name, vote_average, overview, poster_path, air_date, runtime} = data;
 
                 const season = {
                     idSeasons, 
@@ -31,7 +31,7 @@ function SeasonsDetails() {
                     average: vote_average,
                     overview: overview,
                     image: `${images}${poster_path}`,
-                    releaseDate: release_date,
+                    airDate: air_date,
                     runTime: runtime
                 }
                 setSeason(season);
@@ -49,11 +49,6 @@ function SeasonsDetails() {
             <ContainerOverview>
                {season.overview}
             </ContainerOverview>
-
-            <ContainerReleaseTime>
-                <span>Lançamento: {formatDate(season.releaseDate)}</span>
-                <span>Duração: {season.runTime}m</span>
-            </ContainerReleaseTime>
 
             <Link to="/tv/popular" style={linkStyle}>
                 <button>Voltar</button>
