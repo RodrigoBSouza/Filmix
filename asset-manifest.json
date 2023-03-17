@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/filmix/static/css/main.cf84ae7c.css",
-    "main.js": "/filmix/static/js/main.fb5051d6.js",
+    "main.js": "/filmix/static/js/main.793f630f.js",
     "index.html": "/filmix/index.html",
     "main.cf84ae7c.css.map": "/filmix/static/css/main.cf84ae7c.css.map",
-    "main.fb5051d6.js.map": "/filmix/static/js/main.fb5051d6.js.map"
+    "main.793f630f.js.map": "/filmix/static/js/main.793f630f.js.map"
   },
   "entrypoints": [
     "static/css/main.cf84ae7c.css",
-    "static/js/main.fb5051d6.js"
+    "static/js/main.793f630f.js"
   ]
 }
